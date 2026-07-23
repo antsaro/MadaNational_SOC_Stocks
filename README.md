@@ -31,10 +31,10 @@ products, each with pixel-level bootstrap uncertainty estimates.
 
 This repository currently includes the code for:
 
-- **Model fitting** — hyperparameter optimisation and training of the Random Forest and XGBoost
+- **Model fitting** - hyperparameter optimisation and training of the Random Forest and XGBoost
   models for each depth interval, under the repeated cross-validation and nested CV frameworks
   described in the manuscript
-- **Spatial prediction and uncertainty mapping** — bootstrap-based national-scale prediction of
+- **Spatial prediction and uncertainty mapping** - bootstrap-based national-scale prediction of
   SOC stocks and their associated standard deviation and coefficient of variation, at 30 m
   resolution
 
