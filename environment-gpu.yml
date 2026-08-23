@@ -1,0 +1,49 @@
+# Conda environment covering the full GPU-based pipeline in this repository:
+#   - trees_models_fitting.ipynb / train_soc_dualgpu.py
+#       (nested CV hyperparameter search and dual-GPU model training,
+#        cuML RandomForest + XGBoost with device='cuda')
+#   - rf_bootstrap_fil.py, xgb_bootstrap_fil.py, gpu_worker_module.py
+#       (B=100 bootstrap ensembles, GPU raster inference via
+#        cuML Forest Inference Library / XGBoost GPU predict)
+#
+# RAPIDS (cuML, cuPy) is distributed through its own conda channel and is
+# not reliably pip-installable, so this repository needs a conda
+# environment rather than a plain virtualenv for anything GPU-related.
+#
+# Create it with:
+#   conda env create -f environment-gpu.yml
+#   conda activate mada-soc-gpu
+#
+# Requires two NVIDIA GPUs to reproduce the dual-GPU training script as
+# written (train_soc_dualgpu.py assigns RandomForest and XGBoost to
+# separate CUDA_VISIBLE_DEVICES). It will still run on a single GPU if
+# MODEL_GPU_MAP in that script is edited to point both models at GPU 0,
+# just sequentially rather than in parallel.
+#
+# Original runs were on Kaggle's free tier (dual NVIDIA T4, 16 GB VRAM
+# each, driver supporting CUDA 12.x). Check current RAPIDS/CUDA
+# compatibility at https://rapids.ai/start.html before installing, since
+# supported version combinations change over time.
+
+name: mada-soc-gpu
+channels:
+  - rapidsai
+  - conda-forge
+  - nvidia
+dependencies:
+  - python=3.11
+  - cuml=24.10
+  - cupy
+  - cudatoolkit=12.2
+  - xgboost>=2.0
+  - scikit-learn>=1.3
+  - optuna>=3.4
+  - numpy>=1.24
+  - pandas>=2.0
+  - joblib>=1.3
+  - rasterio>=1.3
+  - tqdm>=4.66
+  - psutil>=5.9
+  - matplotlib>=3.7
+  - jupyterlab>=4.0
+  - ipykernel>=6.25

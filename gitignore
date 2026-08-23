@@ -1,0 +1,57 @@
+# Data
+# SOC observation tables, covariate rasters, and predictor tables are not
+# tracked here — see README for data sources.
+*.csv
+*.tif
+*.tiff
+*.gpkg
+*.shp
+*.shx
+*.dbf
+*.prj
+/data/
+/DeepSOC_predictors_table_final.csv
+
+# Model outputs, bootstrap replicates, prediction rasters
+*.pkl
+*.joblib
+*.model
+/ML_SOC_Results_GPU/
+/DeepSOC_RF/
+/DeepSOC_XGB_DualGPU_Bootstrap/
+/models/
+/logs/
+*.log
+
+# Kaggle execution paths / mounted datasets
+/kaggle/
+
+# Optuna
+*.db
+*.db-journal
+
+# Jupyter
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Conda
+*.conda/
+
+# GPU / CUDA cache
+.nv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

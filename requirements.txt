@@ -1,0 +1,32 @@
+# Base dependencies shared across all scripts in this repository.
+#
+# IMPORTANT: this repository is GPU-first. Model training
+# (train_soc_dualgpu.py) and bootstrap raster inference
+# (rf_bootstrap_fil.py, xgb_bootstrap_fil.py, gpu_worker_module.py) all
+# require an NVIDIA GPU with RAPIDS cuML and cuPy, which are not reliably
+# pip-installable in a plain environment. Use environment-gpu.yml (conda)
+# to get a working setup for those scripts.
+#
+# This requirements.txt covers packages that DO install cleanly with pip
+# and is useful for CPU-side tasks: inspecting results, working with the
+# predictor tables, or reading exported rasters/pickled outputs.
+
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+optuna>=3.4
+joblib>=1.3
+matplotlib>=3.7
+
+# XGBoost's pip wheel (>=2.0) ships with CUDA support built in, so it is
+# usable for GPU training without conda, provided the CUDA driver on the
+# machine is compatible. This is unlike cuML/cuPy below.
+xgboost>=2.0
+
+rasterio>=1.3
+tqdm>=4.66
+psutil>=5.9
+
+# Notebook environment
+jupyterlab>=4.0
+ipykernel>=6.25
