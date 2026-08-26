@@ -58,3 +58,9 @@ publication).
 
 For questions about the code or the underlying database, please open an issue or contact the
 corresponding author of the manuscript.
+
+## Exploration
+
+Explore the **Madagascar National Soil Organic Carbon (SOC) Stocks** map through the interactive Google Earth Engine application:
+
+[Open the interactive GEE app](https://antsasarobidyrandria.users.earthengine.app/view/madagascar-soil-organic-carbon-stocks)
