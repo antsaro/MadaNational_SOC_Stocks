@@ -51,8 +51,7 @@ coefficient of variation (g–i) for the XGBoost model across the three depth in
 
 ## Citation
 
-If you use this code, please cite the associated manuscript (full reference to be added upon
-publication).
+Ramifehiarivo, N., Randrianantenaina, A. S., Ratovoarimanana, L. M., Andriamananjara, A., Razafimbelo, T., Devenish, A., Vorontsova, M. S., Bouillon, S., Lehmann, C., Ravonjiarison, S. N., Tovonarivo, R., Razafindrakoto, M., Rabenarivo, M., Razafimanantsoa, M. P., Rakotonindrina, H., Razanamahandry, V. F., Andrianary, B. H., Andriantiavina, M. P., Ramanandraibe, I., ... Razakamanarivo, H. (2026). Update of the national soil carbon map of Madagascar using additional data and earth observation platforms. Manuscript submitted for publication.
 
 ## Contact
 
